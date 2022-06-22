@@ -2,9 +2,8 @@ const menu=document.getElementById("category1")
 const image=document.getElementById("img")
 const category=document.getElementById("category")
 const thumb=document.getElementById("CategoryThumb")
-const description=document.getElementById("CategoryDescription")
+const description=document.querySelector(".information")
 const button=document.getElementById("order-now")
-
 
 function displayFood(foodObj){
     //category.innerText=foodObj.food-information
@@ -13,8 +12,8 @@ function displayFood(foodObj){
     thumb.innerText=foodObj.CategoryThumb
     description.innerText=foodObj.CategoryDescription
 
-    CategoryThumb.src=foodObj.CategoryThumb
-    
+    thumb.src=foodObj.thumb
+
 }
 fetch("http://localhost:3000/categories")
 .then(response=>response.json())
