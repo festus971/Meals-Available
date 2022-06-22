@@ -8,11 +8,9 @@ const button=document.getElementById("order-now")
 function displayFood(foodObj){
     //category.innerText=foodObj.food-information
     // image.innerText=foodObj.img
-    category.innerText=foodObj.category
-    thumb.innerText=foodObj.CategoryThumb
+    category.innerText=foodObj.Category
     description.innerText=foodObj.CategoryDescription
-
-    thumb.src=foodObj.thumb
+    image.src=foodObj.CategoryThumb
 
 }
 fetch("http://localhost:3000/categories")
@@ -20,14 +18,17 @@ fetch("http://localhost:3000/categories")
 .then(jsonData=>{
     //console.log(jsonData)
 displayFood(jsonData[0])
-const foodList =document.getElementById("category1")
-jsonData.forEach(foodObj=>{
-    const li=document.createElement("li")
-    li.className="food-category"
-    li.innerText=foodObj.category1
-    foodObj.append(li)
-    li.addEventListener("click",()=>{
-        displayFood(foodObj)
-    })
-})
+displayMeal(jsonData)
 })  
+function displayMeal(arrayOfMeals){
+    arrayOfMeals.forEach(foodObj=>{
+        const li=document.createElement("li")
+        li.className="food-category"
+        li.innerText=foodObj.Category
+        menu.append(li)
+        li.addEventListener("click",()=>{
+            displayFood(foodObj)
+        })
+    })
+
+}
