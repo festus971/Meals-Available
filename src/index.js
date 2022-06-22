@@ -16,16 +16,27 @@ const thumb=document.getElementById("CategoryThumb")
 const description=document.getElementById("CategoryDescription")
 const button=document.getElementById("order-now")
 
-fetch("http://localhost:3000/categories")
-.then(response=>response.json())
-.then(jsonData=>{
-    console.log(jsonData)
 
-})
 function displayFood(foodObj){
-    category.innerText=foodObj.food-information
+    //category.innerText=foodObj.food-information
     image.innerText=foodObj.image
     thumb.innerText=foodObj.CategoryThumb
     description.innerText=foodObj.CategoryDescription
     
 }
+fetch("http://localhost:3000/categories")
+.then(response=>response.json())
+.then(jsonData=>{
+    //console.log(jsonData)
+displayFood(jsonData[0])
+const foodList=document.getElementById("category1")
+jsonData.forEach(foodList=>{
+    const li=document.createElement("li")
+    li.className="food-category"
+    li.innerText=foodList.category1
+    foodList.append(li)
+    li.addEventListener("click",()=>{
+        displayFood(foodObj)
+    })
+})
+})  
