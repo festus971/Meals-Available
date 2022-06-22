@@ -22,3 +22,10 @@ fetch("http://localhost:3000/categories")
     console.log(jsonData)
 
 })
+function displayFood(foodObj){
+    category.innerText=foodObj.food-information
+    image.innerText=foodObj.image
+    thumb.innerText=foodObj.CategoryThumb
+    description.innerText=foodObj.CategoryDescription
+    
+}
