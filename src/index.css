@@ -1,5 +1,5 @@
 * {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* body{
     display: flex;
@@ -9,8 +9,10 @@ box-sizing: border-box;
     padding: 30px;
     min-height: 100vh;
 } */
-.side-menu{
-    width: 30%;
-    position: relative;
-    left: 0;
+#category1 {
+  width: 30%;
+  position: relative;
+  left: 0;
+  font-size: large;
+  cursor: pointer;
 }
