@@ -30,3 +30,9 @@ function displayMeal(arrayOfMeals){
         })
     })
 }
+function buttonClick(button){
+    button.addEventListener("click", (e)=>{
+        alert("Your have successfuly made an order.")
+    })
+
+}

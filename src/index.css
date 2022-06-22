@@ -9,6 +9,10 @@
     padding: 30px;
     min-height: 100vh;
 } */
+ul{
+    font-size: xx-large;
+    color: cadetblue;
+}
 #category1 {
   width: 30%;
   position: relative;
@@ -17,3 +21,4 @@
   cursor: pointer;
   list-style: none;
 }
+
