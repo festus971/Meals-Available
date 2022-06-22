@@ -4,6 +4,9 @@ const category=document.getElementById("category")
 const thumb=document.getElementById("CategoryThumb")
 const description=document.querySelector(".information")
 const button=document.getElementById("order-now")
+button.addEventListener("click",()=>{
+    //button.innerText=foodObj
+})
 
 function displayFood(foodObj){
     //category.innerText=foodObj.food-information
@@ -30,9 +33,4 @@ function displayMeal(arrayOfMeals){
         })
     })
 }
-function buttonClick(button){
-    button.addEventListener("click", (e)=>{
-        alert("Your have successfuly made an order.")
-    })
 
-}
