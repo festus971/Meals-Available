@@ -9,8 +9,6 @@ button.addEventListener("click",()=>{
 })
 
 function displayFood(foodObj){
-    //category.innerText=foodObj.food-information
-    // image.innerText=foodObj.img
     category.innerText=foodObj.Category
     description.innerText=foodObj.CategoryDescription
     image.src=foodObj.CategoryThumb

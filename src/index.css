@@ -21,4 +21,10 @@ ul{
   cursor: pointer;
   list-style: none;
 }
+#done{
+  background-color: aqua;
+  min-width: 40%;
+  height: 40vh;
+  
 
+}

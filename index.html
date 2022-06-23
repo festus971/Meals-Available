@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/index.css" />
     <title>Food web</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="row">
-            <h1>Feeling Hungry, Need Some Food?</h1>
-            <br>
-            <!-- Titles of food comes here side menu -->
-            <div class="side-menu">
-                <ul class="food-category" id="category1">Food Category</ul>
-            </div>
-            <!-- images and poster -->
-            <div id="category"></div>
-            <div class="image" >
-                <img id="img"/>
-            </div>
-            <!-- information goes here -->
-            <div class="information" id="food-information">
-                
-                <div id="CategoryThumb"></div>
-                <div id="CategoryDescription"></div>
-            </div>
-            <h4> Click Here To Make Your Order.</h4>
-            <button class="button" id="order-now">Order Now</button>
-
+      <div class="row">
+        <h1>Need to know something about our food offered? Click on one of the and View.</h1>
+        <br />
+        <!-- Titles of food comes here side menu -->
+        <div class="side-menu">
+          <ul class="food-category" id="category1">
+            Food Category
+          </ul>
         </div>
-        <div id="foods" class="meals"></div>
+        <!-- images and poster -->
+        <div id="done">
+          <div id="category"></div>
+          <div class="image">
+            <img id="img" />
+          </div>
+          <!-- information goes here -->
+          <div class="information" id="food-information">
+            <div id="CategoryThumb"></div>
+            <div id="CategoryDescription"></div>
+          </div>
+          <h4>Click Here To Make Your Order.</h4>
+          <button class="button" id="order-now">Order Now</button>
+        </div>
+      </div>
+      <div id="foods" class="meals"></div>
     </div>
-   
+
     <script src="./src/index.js"></script>
-</body>
+  </body>
 </html>
