@@ -3,11 +3,11 @@ const image=document.getElementById("img")
 const category=document.getElementById("category")
 const thumb=document.getElementById("CategoryThumb")
 const description=document.querySelector(".information")
-const button=document.getElementById("order-now")
-button.addEventListener("click",()=>{
-    //button.innerText=foodObj
-})
 
+const button=document.getElementById("order-now").addEventListener("click",()=>{
+       alert ("Order made successfuly")
+    }
+)
 function displayFood(foodObj){
     category.innerText=foodObj.Category
     description.innerText=foodObj.CategoryDescription
