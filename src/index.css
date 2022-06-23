@@ -22,9 +22,25 @@ ul{
   list-style: none;
 }
 #done{
-  background-color: aqua;
-  min-width: 40%;
-  height: 40vh;
   
+  clear: both;
+  /* border: 1px solid red; */
+  font-size: larger;
+  margin-left: auto;
+  padding: auto;
+  height: 40vh;
+  margin-bottom: 10vh;
 
+}
+.food{
+  color: blue;
+  font-weight: 700;
+  font-style: italic;
+}
+button{
+cursor: pointer;
+color: green;
+display: flex;
+float:right;
+font-size: x-large;
 }
