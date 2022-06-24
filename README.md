@@ -1,4 +1,4 @@
-# Meals 
+# Meals project.
 
 An app that allows one to view and checkon one of any favourite and order it.
 
@@ -8,13 +8,27 @@ An app that allows one to view and checkon one of any favourite and order it.
 
 
 
+## Setup
 
-## Specifications
+Run this command to get the backend started:
 
+console
+json-server --watch db.json
+Test your server by visiting this route in the browser:
 
-## Prerequisites
+[http://localhost:3000/categories](http://localhost:3000/categories)
 
+Then, open the `index.html` file on your browser to run the application.
 
+Write your code in the `src/index.js` file. The base URL for your API will be
+[http://localhost:3000](http://localhost:3000).
+
+## Delivarables
+As a user, I can:
+
+ See the first meal details, including its **image, title, and description when the page loads. And i can be able to click on the order button to make the order and be able to see an alert telling me that have made an order successfully. 
+
+ See the list of all available meals/food.
 
 ## Technologies Used 
 
@@ -46,7 +60,7 @@ To fix a bug or enhance an existing module, follow these steps:
 - Push to the branch (`git push origin improve-feature`)
 - Create a Pull Request 
 
-## Known Bugs
+
 
 
 
