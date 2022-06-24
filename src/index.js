@@ -9,26 +9,27 @@ const button=document.getElementById("order-now").addEventListener("click",()=>{
     }
 )
 function displayFood(foodObj){
-    category.innerText=foodObj.Category
-    description.innerText=foodObj.CategoryDescription
-    image.src=foodObj.CategoryThumb
+    category.innerText=foodObj.strCategory
+    description.innerText=foodObj.strInstructions
+    image.src=foodObj.strMealThumb
 }
-fetch("http://localhost:3000/categories")
+  fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=c")
 .then(response=>response.json())
 .then(jsonData=>{
-    //console.log(jsonData)
-displayFood(jsonData[0])
-displayMeal(jsonData)
+    console.log(jsonData.meals)
+displayFood(jsonData.meals[0])
+displayMeal(jsonData.meals)
 })  
 function displayMeal(arrayOfMeals){
     arrayOfMeals.forEach(foodObj=>{
         const li=document.createElement("li")
         li.className="food-category"
-        li.innerText=foodObj.Category
+        li.innerText=foodObj.strCategory
         menu.append(li)
         li.addEventListener("click",()=>{
             displayFood(foodObj)
         })
     })
 }
+
 
