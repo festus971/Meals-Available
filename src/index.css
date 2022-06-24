@@ -8,6 +8,7 @@ body {
   align-items: center;
   padding: 30px;
   min-height: 100vh;
+  background-color: yellow;
 }
 ul {
   font-size: xx-large;
@@ -44,18 +45,22 @@ ul {
 }
 button {
   cursor: pointer;
-  color: green;
+  color: aqua;
   display: flex;
   float: right;
   font-size: x-large;
 }
 #img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50px;
 }
 #category {
   font-weight: 700;
 }
 .information {
   font-size: large;
+}
+h1 {
+  margin-left: 20%;
 }
