@@ -44,15 +44,11 @@ As a user, I can:
     1. Clone or download the Repository
     2. cd into directory then run `cd fronted`
 
-    
+
 ### Bugs 
     
     
-     Currently there are no know bugs.
-
-
-    
-
+Currently there are no know bugs.
 
 
 ### License
