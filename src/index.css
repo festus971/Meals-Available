@@ -1,17 +1,26 @@
 * {
   box-sizing: border-box;
 }
-/* body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    min-height: 100vh;
-} */
-ul{
-    font-size: xx-large;
-    color: cadetblue;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  min-height: 100vh;
+  background-color: #ffc244;
+}
+ul {
+  font-size: xx-large;
+  color: cadetblue;
+  -moz-column-count: 4;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 20px;
+  column-count: 4;
+  column-gap: 6rem;
+  float: left;
+  width: 6em;
 }
 #category1 {
   width: 30%;
@@ -21,26 +30,37 @@ ul{
   cursor: pointer;
   list-style: none;
 }
-#done{
-  
+#done {
   clear: both;
-  /* border: 1px solid red; */
   font-size: larger;
   margin-left: auto;
   padding: auto;
   height: 40vh;
   margin-bottom: 10vh;
-
 }
-.food{
+.food {
   color: blue;
   font-weight: 700;
   font-style: italic;
 }
-button{
-cursor: pointer;
-color: green;
-display: flex;
-float:right;
-font-size: x-large;
+button {
+  cursor: pointer;
+  color: aqua;
+  display: flex;
+  float: right;
+  font-size: x-large;
+}
+#img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50px;
+}
+#category {
+  font-weight: 700;
+}
+.information {
+  font-size: large;
+}
+h1 {
+  margin-left: 20%;
 }
