@@ -9,19 +9,11 @@ An app that allows one to view and checkon one of any favourite and order it.
 
 
 ## Setup
-
-Run this command to get the backend started:
-
-console
-json-server --watch db.json
-Test your server by visiting this route in the browser:
-
-[http://localhost:3000/categories](http://localhost:3000/categories)
-
-Then, open the `index.html` file on your browser to run the application.
+open the `index.html` file on your browser to run the application.
 
 Write your code in the `src/index.js` file. The base URL for your API will be
-[http://localhost:3000](http://localhost:3000).
+
+    https://www.themealdb.com/api/json/v1/1/search.php?f=c
 
 ## Delivarables
 As a user, I can:
