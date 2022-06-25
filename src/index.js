@@ -13,7 +13,7 @@ function displayFood(foodObj){
     description.innerText=foodObj.strInstructions
     image.src=foodObj.strMealThumb
 }
-  fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=c")
+  fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=e")
 .then(response=>response.json())
 .then(jsonData=>{
     console.log(jsonData.meals)
