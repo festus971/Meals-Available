@@ -8,7 +8,7 @@ body {
   align-items: center;
   padding: 30px;
   min-height: 100vh;
-  background-color: #ffc244;
+  
 }
 ul {
   font-size: xx-large;
@@ -63,4 +63,9 @@ button {
 }
 h1 {
   margin-left: 20%;
+  background-color: yellowgreen;
+  width: fit-content;
+}
+h4{
+  margin-left: 90%;
 }
