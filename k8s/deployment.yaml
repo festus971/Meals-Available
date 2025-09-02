@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meals-available
+  labels:
+    app: meals-available
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meals-available
+  template:
+    metadata:
+      labels:
+        app: meals-available
+    spec:
+      containers:
+      - name: meals-available
+        image: meals-available:local
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: meals-available-service
+  labels:
+    app: meals-available
+spec:
+  selector:
+    app: meals-available
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: ClusterIP

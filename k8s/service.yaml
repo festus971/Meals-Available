@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: meals-available-svc
+spec:
+  selector:
+    app: meals-available
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
