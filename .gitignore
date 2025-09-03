@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Docker
+*.pid
+*.env
+.env.local
+.env.*
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.swp
+*.tmp
+
+# Kubernetes config
+.kube/
+
+# Python (if any)
+__pycache__/
+*.pyc
