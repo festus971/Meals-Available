@@ -97,7 +97,20 @@ Access the app in your browser using the EXTERNAL-IP (DNS name) provided.
 - Check AWS Console > EC2 > Load Balancers for DNS and health.
 
 ---
-This README reflects the actual deployment steps performed for Meals-Available on AWS EKS.
+#### 8 . delete resources
+
+```bash
+eksctl delete cluster --region=us-east-1 --name=meals-available-cluster
+```
+will delete your EKS cluster and all associated resources created by eksctl, including:
+- Worker nodes
+- Node groups
+- Load balancers created by Kubernetes services
+- CloudFormation stacks
+- Networking resources (VPC, subnets, etc. if created by eksctl)
+
+![alt text](image.png)
+
 ## MIT License
 Copyright (c) [2025] [Festus kiprop] 
 Permission is hereby granted, free of charge, to any person obtaining a copy
