@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: meals-available
-        image: meals-available:local
-        imagePullPolicy: Never
+        image: festus971/meals-available:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         env:

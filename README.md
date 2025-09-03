@@ -39,8 +39,67 @@ Resources
 ## Known Bugs
 * Responsiveness breaks on small-screen devices.
 * The page might take time to respond or fetch info from the API used.
+
+## Deploying Meals-Available to AWS EKS
+
+This section describes the steps taken to deploy the Meals-Available service to AWS Elastic Kubernetes Service (EKS).
+
+### Prerequisites
+
+- AWS account
+- AWS CLI installed and configured (`aws configure`)
+- Docker installed and account on Docker Hub
+- kubectl installed
+- eksctl installed
+
+### Step-by-Step Deployment Journey
+
+#### 1. Build Docker Image
+Build the Docker image from the project root:
+```bash
+docker build -t <your-dockerhub-username>/meals-available:latest .
+```
+
+#### 2. Push Image to Docker Hub
+Login and push the image:
+```bash
+docker login -u <your-dockerhub-username>
+docker push <your-dockerhub-username>/meals-available:latest```
+
+#### 3. Create EKS Cluster
+Create a cluster with eksctl:
+```bash
+eksctl create cluster --name meals-available-cluster --region us-east-1 --nodes 2
+```
+
+#### 4. Update kubeconfig
+```bash
+aws eks --region us-east-1 update-kubeconfig --name meals-available-cluster
+```
+
+#### 5. Deploy to EKS
+Apply the Kubernetes manifests:
+```bash
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+```
+
+#### 6. Check Service and Access App
+Get the external DNS of the LoadBalancer service:
+```bash
+kubectl get svc meals-available-svc
+```
+Access the app in your browser using the EXTERNAL-IP (DNS name) provided.
+
+#### 7. Troubleshooting
+- Ensure your image is public and `imagePullPolicy` is not set to `Never`.
+- Check pod status with `kubectl get pods`.
+- Check AWS Console > EC2 > Load Balancers for DNS and health.
+
+---
+This README reflects the actual deployment steps performed for Meals-Available on AWS EKS.
 ## MIT License
-Copyright (c) [2022] [Festus kiprop] 
+Copyright (c) [2025] [Festus kiprop] 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -57,6 +116,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ## Authors Info
-Gmail -
-        [festus kiprop](festus.kiprop@student.moringaschool.com)
-[Go Back to the top](meal-available app)
+        festus kiprop 
